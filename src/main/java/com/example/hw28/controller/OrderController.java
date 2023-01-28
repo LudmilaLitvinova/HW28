@@ -11,7 +11,7 @@ import java.util.List;
  * @author Ludmila Litvinova on 25.01
  */
 @RestController
-@RequestMapping("orders")
+@RequestMapping("order")
 @RequiredArgsConstructor
 public class OrderController {
 

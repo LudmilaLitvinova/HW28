@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author Ludmila Litvinova on 25.01
@@ -26,6 +27,6 @@ public class OrderDto {
 
     private Integer cost;
 
-    private String products;
+    private List<ProductDto> products;
 
 }

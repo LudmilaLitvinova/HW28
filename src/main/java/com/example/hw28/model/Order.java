@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author Ludmila Litvinova on 25.01
@@ -32,10 +33,10 @@ public class Order {
     @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate creationDate;
 
-    @Column
+    @Column(name = "cost")
     private Integer cost;
 
-    @Column
-    private String products;
+    @OneToMany(mappedBy="id",fetch = FetchType.LAZY)
+    private List<Product> products;
 
 }
